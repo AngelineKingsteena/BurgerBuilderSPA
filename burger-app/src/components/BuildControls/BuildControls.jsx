@@ -12,7 +12,7 @@ const BuildControls = props => {
   return (
     <div className={classes.BuildControls}>
       <p>
-        Total Price : <strong>{props.price} $</strong>
+        Total Price : <strong>{props.price.toFixed(2)} $</strong>
       </p>
       {controls.map(ctrl => (
         <BuildControl
@@ -29,7 +29,7 @@ const BuildControls = props => {
         disabled={!props.purchaseable}
         onClick={props.purchasing}
       >
-       {props.isAuth ? "ORDER NOW" : "SIGN-UP TO ORDER"} 
+        {props.isAuth ? "ORDER NOW" : "SIGN-UP TO ORDER"}
       </button>
     </div>
   );

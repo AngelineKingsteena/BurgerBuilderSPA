@@ -19,12 +19,12 @@ class OrderSummary extends Component {
     });
     return (
       <Aux>
-        <h1>Your Order Details:</h1>
+        <h5>Your Order Details:</h5>
         <p>The ingredients summary of your order is:</p>
         <ul>{ingredientSummary}</ul>
 
         <p>
-          <strong>Total Price : {this.props.priceSummary} $</strong>
+          <strong>Total Price : {this.props.priceSummary.toFixed(2)} $</strong>
         </p>
         <p>Continue to check out ? </p>
         <Button clicked={this.props.purchaseContinue} btnType="Success">
