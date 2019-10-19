@@ -13,11 +13,11 @@ FOR CLONING AND PERSONAL USE:
 
 and in the url taken from ENDPOINT, replace [API_KEY] with your firebase project web api key ,found in settings page of your project in firebase console
 
-3)And in src\store\actions\burgerBuilderAction.js replace axios.get URL with your <--firebase realtime database url-->/ingredients.json i.e pointing to the node ingredients in your json data.
+3)And in src\store\actions\burgerBuilderAction.js replace axios.get URL with your <--firebase realtime database url-->/ingredients.json i.e pointing to the ingredients node in your json data.
 
 
-And for deployment,follow :-
-1)First build your project using npm run build
+And for deployment:-
+1)First build your project using-> npm run build
 2)Then navigate to Hosting in your firebase project console and follow the steps given in it.
 
 
