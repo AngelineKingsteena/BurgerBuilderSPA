@@ -30,10 +30,10 @@ export const auth = (email, password, isSignUp) => {
       returnSecureToken: true
     };
     let url =
-      "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAa7eojqNORnCTsWa-OEoQng-huyQOFuUo";
+      "copy url from firebase auth rest api for SIGN UP with email and password,replaceapi key with your firebase web api key";
     if (!isSignUp) {
       url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAa7eojqNORnCTsWa-OEoQng-huyQOFuUo";
+        "copy url from firebase auth rest api for SIGN IN with email and password,replaceapi key with your firebase web api key";
     }
     axios
       .post(url, authData)
