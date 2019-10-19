@@ -15,7 +15,24 @@ and in the url taken from ENDPOINT, replace [API_KEY] with your firebase project
 
 3)And in src\store\actions\burgerBuilderAction.js replace axios.get URL with your <--firebase realtime database url-->/ingredients.json i.e pointing to the ingredients node in your json data.
 
+4)Set your firebase rules as follows:
 
+{
+  "rules": {
+    "ingredients":{
+    ".read": "true",
+    ".write": "true"
+  },
+    "orders":{
+      ".read": "auth!=null",
+      ".write":"auth!=null",
+      ".indexOn":["userId"]
+    }
+}
+}
+
+5)In your firebase realtime database create node=> ingredients with children nodes of key,value pair of {salad:0,meat:0,bacon:0,cheese:0} for axios to be able to fetch ingredients initially.Be careful to use the exact same spelling and case.
+                                                   
 And for deployment:-
 
 1)First build your project using->    npm run build   in terminal
