@@ -17,7 +17,9 @@ and in the url taken from ENDPOINT, replace [API_KEY] with your firebase project
 
 
 And for deployment:-
-1)First build your project using-> npm run build
+
+1)First build your project using->    npm run build   in terminal
+
 2)Then navigate to Hosting in your firebase project console and follow the steps given in it.
 
 
